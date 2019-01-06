@@ -71,7 +71,7 @@ serviceAccount:spanner-demo-gce-svc-acc@$PROJECT.iam.gserviceaccount.com \
 PROJECT=`gcloud config get-value project 2> /dev/null`; gcloud compute \
 instances create demo-controller-01 --zone europe-west1-c --machine-type \
 n1-standard-1 --scopes "https://www.googleapis.com/auth/cloud-platform" \
---image-project ubuntu-os-cloud --image-family ubuntu-1710 --service-account \
+--image-project ubuntu-os-cloud --image=ubuntu-1804-bionic-v20181222 --service-account \
 spanner-demo-gce-svc-acc@$PROJECT.iam.gserviceaccount.com
 
 gcloud compute scp scripts/setup-demo-controller.sh \
