@@ -57,7 +57,7 @@ printf "\n"
 # printf "\n"
 
 # read -a instanceconfigs <<<$(gcloud spanner instance-configs list --format 'value[separator=":"](displayName)')
-instanceconfigs=("regional-asia-east1" "regional-europe-west1" "regional-us-central1" "multi-regional-nam-eur-asia1")
+instanceconfigs=("regional-asia-east1" "regional-europe-west1" "regional-us-central1" "nam-eur-asia1")
 
 # ask for spanner instance config
 printf "Please select a config for the Spanner instance.\n"
@@ -89,7 +89,7 @@ case $sconfig in
         primary_zone="europe-west1-d"
         instanceconf="regional-europe-west1"
         ;;
-    "multi-regional-nam-eur-asia1")
+    "nam-eur-asia1")
         primary_region="europe"
         primary_zone="europe-west1-d"
         instanceconf="nam-eur-asia1"
